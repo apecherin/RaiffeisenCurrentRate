@@ -1,0 +1,41 @@
+.root {
+    -fx-background-color: rgb(255, 241, 4);
+    -fx-background-repeat: no-repeat;
+}
+
+#btn_calculate {
+    -fx-background-color: linear-gradient(#32CD32, #008000);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+    -fx-padding: 4 14 4 14;
+}
+
+#btn_exit {
+    -fx-background-color: linear-gradient(#ff5400, #be1d00);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+    -fx-padding: 4 34 4 34;
+}
+
+#btn_show_atms {
+    -fx-background-color: linear-gradient(#7ebcea, #2f4b8f);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+}
+
+#inpt_ammount {
+    -fx-font-size: 18px;
+}
+
+#rf_img_left {
+    -fx-background-image: url('icon48.png');
+    -fx-background-repeat: no-repeat;
+}
+
+#rf_img_right{
+    -fx-background-image: url('Increase-in-sale-Icon.png');
+    -fx-background-repeat: no-repeat;
+}
