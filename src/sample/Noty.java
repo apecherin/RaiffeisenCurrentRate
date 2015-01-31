@@ -1,21 +1,22 @@
 package sample;
 
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.VBoxBuilder;
-import javafx.scene.text.Text;
-import javafx.stage.Modality;
+import javafx.scene.control.Dialogs;
 import javafx.stage.Stage;
 
 public class Noty {
-    public static void AlertMessage(String mess) {
-        Stage dialogStage = new Stage();
-        dialogStage.initModality(Modality.WINDOW_MODAL);
-        dialogStage.setScene(new Scene(VBoxBuilder.create().
-                children(new Text("Hi"), new Button("Ok.")).
-                alignment(Pos.CENTER).padding(new Insets(5)).build()));
-        dialogStage.show();
+    public static void AlertMessage(String message, String subject, String title) {
+        Stage dialog = new Stage();
+        Dialogs.showErrorDialog(dialog, message, subject, title);
+    }
+
+    public static boolean ConfirmDialog(String message, String subject, String title) {
+        Stage dialog = new Stage();
+
+        Dialogs.DialogResponse response = Dialogs.showConfirmDialog(dialog, message, subject, title, Dialogs.DialogOptions.YES_NO);
+        if (response == Dialogs.DialogResponse.YES) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

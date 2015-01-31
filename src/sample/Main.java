@@ -22,9 +22,13 @@ public class Main extends Application {
         launch(args);
     }
 
-    public static void validateInputAmmount(String ammount) {
-        System.out.println("calculateWidrawAmmount: " + isInteger(ammount, 10));
-        Noty.AlertMessage("calculateWidrawAmmount");
+    public static boolean validateInputAmmount(String ammount) {
+        if (isInteger(ammount, 10)) {
+            return true;
+        } else {
+            Noty.AlertMessage("Please input integer value of ammount", "The value is not an integer", "Validation error");
+            return false;
+        }
     }
 
     public static boolean isInteger(String s, int radix) {
